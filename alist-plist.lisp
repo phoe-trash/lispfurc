@@ -95,7 +95,7 @@ If any key has a default value, it gets evaluated and set as the value within th
 Otherwise, that key's its value is set to NIL."
   (flet ((conser (arg)
 	   (if (consp arg)
-	       (cons (first arg) (second arg))
+	       (cons (first arg) (eval (second arg)))
 	       (cons arg nil))))
     (list 'quote (mapcar #'conser args))))
 
