@@ -20,7 +20,7 @@
 	#\3 "Burgundy"   #\4 "Pinewood"    #\5 "Sea Blue" #\6 "Violet"
 	#\7 "Red"        #\8 "White"       #\9 "Navy"     #\: "Cloudy Gray"
 	#\; "Royal Blue"))
-
+      
       (color-table-2 ;; Used for hair.
        (list
 	#\# "Blood Red"      #\$ "Courage Red"   #\% "Merry Red"       #\& "Ember Orange"
@@ -35,7 +35,7 @@
 	#\G "Neutral Gray"   #\H "Tragic Gray"   #\I "Winter Gray"     #\J "Indigo"
 	#\K "Black"          #\L "Cloudy Gray"   #\M "White"           #\N "Pinewood"
 	#\O "Green Yellow"))
-
+      
       (color-table-3 ;; Used for eyes.
        (list
 	#\# "Mahogany"     #\$ "Tiger Orange" #\% "Moon Yellow" #\& "Warm Gold"
@@ -46,7 +46,7 @@
 	#\7 "Mink Mauve"   #\8 "Chocolate"    #\9 "Silver"      #\: "Amethyst"
 	#\; "Ember Orange" #\< "Sunshine"     #\= "Mad Green"   #\> "Gloomy Grey"
 	#\? "Minty Green"  #\@ "Navy Blue"))
-
+      
       (color-table-4 ;; Used for badge.
        (list
 	#\# "Blood Red"      #\$ "Courage Red"   #\% "Merry Red"       #\& "Ember Orange"
@@ -59,7 +59,7 @@
 	#\? "Mad Green"      #\@ "Royal Blue"    #\A "Passion"         #\B "Bliss Red"
 	#\C "Blush Pink"     #\D "Twilight Sigh" #\E "Dreamer Blue"    #\F "Shadow Gray"
 	#\G "Neutral Gray"   #\H "Tragic Gray"   #\I "Winter Gray"     #\J "Indigo"))
-
+      
       (color-table-5 ;; Used for vest, bracers, cape, boots and trousers.
        (list
 	#\# "Red"          #\$ "Horse Brown"     #\% "Gray Brown"     #\& "Fox Orange"
@@ -71,28 +71,27 @@
 	#\; "Black"        #\< "Light Mule"      #\= "Dark Mule"      #\> "Violet"
 	#\? "Royal Blue"   #\@ "White")))
 
-  (defun pick-color-table (keyword)
-    "Helper function for picking a proper color table based on a keyword designating a
-color-code slot."
-    (case keyword
-      ((:fur :markings)                        color-table-1)
-      (:hair                                   color-table-2)
-      (:eyes                                   color-table-3)
-      (:badge                                  color-table-4)
-      ((:vest :bracers :cape :boots :trousers) color-table-5)
-      (otherwise (error "Keyword not matching any of:
-:FUR :MARKINGS :HAIR :EYES :BADGE :VEST :BRACERS :CAPE :BOOTS :TROUSERS"))))
-  
-  (defun get-color-char (keyword string)
-    "This, given a keyword designating a color-code slot and a color name, returns a proper
+  (labels
+      ((pick-color-table (keyword)
+	 (case keyword
+	   ((:fur :markings)                        color-table-1)
+	   (:hair                                   color-table-2)
+	   (:eyes                                   color-table-3)
+	   (:badge                                  color-table-4)
+	   ((:vest :bracers :cape :boots :trousers) color-table-5)
+	   (otherwise (error "Keyword not matching any of:
+:FUR :MARKINGS :HAIR :EYES :BADGE :VEST :BRACERS :CAPE :BOOTS :TROUSERS")))))
+    
+    (defun get-color-char (keyword string)
+      "This, given a keyword designating a color-code slot and a color name, returns a proper
 character for the color code."
-    (check-type string string)
-    (check-type keyword keyword)
-    (string=-getf-key (pick-color-table keyword) string))
+      (check-type string string)
+      (check-type keyword keyword)
+      (string=-getf-key (pick-color-table keyword) string))
 
-  (defun get-color-string (keyword char)
-    "This, given a keyword designating a color-code slot and a character for the color code,
+    (defun get-color-string (keyword char)
+      "This, given a keyword designating a color-code slot and a character for the color code,
 returns a proper color name."
-    (check-type char character)
-    (check-type keyword keyword)
-    (getf (pick-color-table keyword) char)))
+      (check-type char character)
+      (check-type keyword keyword)
+      (getf (pick-color-table keyword) char))))
