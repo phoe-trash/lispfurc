@@ -13,66 +13,66 @@
 
 (let ((color-table-1 ;; Used for fur and markings.
        (list
-	#\# "Cat Gray"   #\$ "Arctic"      #\% "Black"    #\& "Mule Tan"
-	#\' "Dust"       #\( "Chocolate"   #\) "Lavender" #\* "Wolf Gray"
-	#\+ "Fox Orange" #\, "Horse Brown" #\- "Tawny"    #\. "Mocha"
-	#\/ "Ruddy"      #\0 "Cream"       #\1 "Yellow"   #\2 "Grass Green"
-	#\3 "Burgundy"   #\4 "Pinewood"    #\5 "Sea Blue" #\6 "Violet"
-	#\7 "Red"        #\8 "White"       #\9 "Navy"     #\: "Cloudy Gray"
-	#\; "Royal Blue"))
+	0  "Cat Gray"   1  "Arctic"      2  "Black"    3  "Mule Tan"
+	4  "Dust"       5  "Chocolate"   6  "Lavender" 7  "Wolf Gray"
+	8  "Fox Orange" 9  "Horse Brown" 10 "Tawny"    11 "Mocha"
+	12 "Ruddy"      13 "Cream"       14 "Yellow"   15 "Grass Green"
+	16 "Burgundy"   17 "Pinewood"    18 "Sea Blue" 19 "Violet"
+	20 "Red"        21 "White"       22 "Navy"     23 "Cloudy Gray"
+	24 "Royal Blue"))
       
       (color-table-2 ;; Used for hair.
        (list
-	#\# "Blood Red"      #\$ "Courage Red"   #\% "Merry Red"       #\& "Ember Orange"
-	#\' "Hearty Brown"   #\( "Burnt Orange"  #\) "Busy Orange"     #\* "August Orange"
-	#\+ "Noble Brown"    #\, "Mahogany"      #\- "Clever Maize"    #\. "Pure Gold"
-	#\/ "Moon Yellow"    #\0 "Sun Yellow"    #\1 "Tan"             #\2 "Woodland Green"
-	#\3 "Friendly Green" #\4 "Lucky Green"   #\5 "Travelers Green" #\6 "Aquacyan"
-	#\7 "Deepsea Blue"   #\8 "Proud Blue"    #\9 "Lightsky Blue"   #\: "Syndira Blue"
-	#\; "Straight Blue"  #\< "Royal Purple"  #\= "Lonely Orchid"   #\> "Spiritual Purple"
-	#\? "Mad Green"      #\@ "Royal Blue"    #\A "Passion"         #\B "Bliss Red"
-	#\C "Blush Pink"     #\D "Twilight Sigh" #\E "Dreamer Blue"    #\F "Shadow Gray"
-	#\G "Neutral Gray"   #\H "Tragic Gray"   #\I "Winter Gray"     #\J "Indigo"
-	#\K "Black"          #\L "Cloudy Gray"   #\M "White"           #\N "Pinewood"
-	#\O "Green Yellow"))
+	0  "Blood Red"      1  "Courage Red"   2  "Merry Red"       3  "Ember Orange"
+	4  "Hearty Brown"   5  "Burnt Orange"  6  "Busy Orange"     7  "August Orange"
+	8  "Noble Brown"    9  "Mahogany"      10 "Clever Maize"    11 "Pure Gold"
+	12 "Moon Yellow"    13 "Sun Yellow"    14 "Tan"             15 "Woodland Green"
+	16 "Friendly Green" 17 "Lucky Green"   18 "Travelers Green" 19 "Aquacyan"
+	20 "Deepsea Blue"   21 "Proud Blue"    22 "Lightsky Blue"   23 "Syndira Blue"
+	24 "Straight Blue"  25 "Royal Purple"  26 "Lonely Orchid"   27 "Spiritual Purple"
+	28 "Mad Green"      29 "Royal Blue"    30 "Passion"         31 "Bliss Red"
+	32 "Blush Pink"     33 "Twilight Sigh" 34 "Dreamer Blue"    35 "Shadow Gray"
+	36 "Neutral Gray"   37 "Tragic Gray"   38 "Winter Gray"     39 "Indigo"
+	40 "Black"          41 "Cloudy Gray"   42 "White"           43 "Pinewood"
+	44 "Green Yellow"))
       
       (color-table-3 ;; Used for eyes.
        (list
-	#\# "Mahogany"     #\$ "Tiger Orange" #\% "Moon Yellow" #\& "Warm Gold"
-	#\' "Pond Green"   #\( "Light Blue"   #\) "Sea Blue"    #\* "Storm Gray"
-	#\+ "Dust"         #\, "China Blue"   #\- "Medium Blue" #\. "Dark Blue"
-	#\/ "Hazel"        #\0 "Blue Green"   #\1 "Royal Blue"  #\2 "Light Brown"
-	#\3 "Medium Brown" #\4 "Dark Brown"   #\5 "Black"       #\6 "Albino Pink"
-	#\7 "Mink Mauve"   #\8 "Chocolate"    #\9 "Silver"      #\: "Amethyst"
-	#\; "Ember Orange" #\< "Sunshine"     #\= "Mad Green"   #\> "Gloomy Grey"
-	#\? "Minty Green"  #\@ "Navy Blue"))
+	0  "Mahogany"     1  "Tiger Orange" 2  "Moon Yellow" 3  "Warm Gold"
+	4  "Pond Green"   5  "Light Blue"   6  "Sea Blue"    7  "Storm Gray"
+	8  "Dust"         9  "China Blue"   10 "Medium Blue" 11 "Dark Blue"
+	12 "Hazel"        13 "Blue Green"   14 "Royal Blue"  15 "Light Brown"
+	16 "Medium Brown" 17 "Dark Brown"   18 "Black"       19 "Albino Pink"
+	20 "Mink Mauve"   21 "Chocolate"    22 "Silver"      23 "Amethyst"
+	24 "Ember Orange" 25 "Sunshine"     26 "Mad Green"   27 "Gloomy Grey"
+	28 "Minty Green"  29 "Navy Blue"))
       
       (color-table-4 ;; Used for badge.
        (list
-	#\# "Blood Red"      #\$ "Courage Red"   #\% "Merry Red"       #\& "Ember Orange"
-	#\' "Hearty Brown"   #\( "Burnt Orange"  #\) "Busy Orange"     #\* "August Orange"
-	#\+ "Noble Brown"    #\, "Mahogany"      #\- "Clever Maize"    #\. "Pure Gold"
-	#\/ "Moon Yellow"    #\0 "Sun Yellow"    #\1 "Tan"             #\2 "Woodland Green"
-	#\3 "Friendly Green" #\4 "Lucky Green"   #\5 "Travelers Green" #\6 "Aquacyan"
-	#\7 "Deepsea Blue"   #\8 "Proud Blue"    #\9 "Lightsky Blue"   #\: "Syndira Blue"
-	#\; "Straight Blue"  #\< "Royal Purple"  #\= "Lonely Orchid"   #\> "Spiritual Purple"
-	#\? "Mad Green"      #\@ "Royal Blue"    #\A "Passion"         #\B "Bliss Red"
-	#\C "Blush Pink"     #\D "Twilight Sigh" #\E "Dreamer Blue"    #\F "Shadow Gray"
-	#\G "Neutral Gray"   #\H "Tragic Gray"   #\I "Winter Gray"     #\J "Indigo"))
+	0  "Blood Red"      1  "Courage Red"   2  "Merry Red"       3  "Ember Orange"
+	4  "Hearty Brown"   5  "Burnt Orange"  6  "Busy Orange"     7  "August Orange"
+	8  "Noble Brown"    9  "Mahogany"      10 "Clever Maize"    11 "Pure Gold"
+	12 "Moon Yellow"    13 "Sun Yellow"    14 "Tan"             15 "Woodland Green"
+	16 "Friendly Green" 17 "Lucky Green"   18 "Travelers Green" 19 "Aquacyan"
+	20 "Deepsea Blue"   21 "Proud Blue"    22 "Lightsky Blue"   23 "Syndira Blue"
+	24 "Straight Blue"  25 "Royal Purple"  26 "Lonely Orchid"   27 "Spiritual Purple"
+	28 "Mad Green"      29 "Royal Blue"    30 "Passion"         31 "Bliss Red"
+	32 "Blush Pink"     33 "Twilight Sigh" 34 "Dreamer Blue"    35 "Shadow Gray"
+	36 "Neutral Gray"   37 "Tragic Gray"   38 "Winter Gray"     39 "Indigo"))
       
       (color-table-5 ;; Used for vest, bracers, cape, boots and trousers.
        (list
-	#\# "Red"          #\$ "Horse Brown"     #\% "Gray Brown"     #\& "Fox Orange"
-	#\' "Cream Brown"  #\( "Yellow"          #\) "Pea Green"      #\* "Grass Green"
-	#\+ "Avocado"      #\, "Sea Blue"        #\- "Blue Gray"      #\. "Wolf Gray"
-	#\/ "Arctic"       #\0 "Violet Blue"     #\1 "Spring Green"   #\2 "Burgundy"
-	#\3 "Green Yellow" #\4 "Light Chocolate" #\5 "Dark Chocolate" #\6 "Light Navy"
-	#\7 "Dark Navy"    #\8 "Light Dust"      #\9 "Dark Dust"      #\: "Gray"
-	#\; "Black"        #\< "Light Mule"      #\= "Dark Mule"      #\> "Violet"
-	#\? "Royal Blue"   #\@ "White")))
+	0  "Red"          1  "Horse Brown"     2  "Gray Brown"     3  "Fox Orange"
+	4  "Cream Brown"  5  "Yellow"          6  "Pea Green"      7  "Grass Green"
+	8  "Avocado"      9  "Sea Blue"        10 "Blue Gray"      11 "Wolf Gray"
+	12 "Arctic"       13 "Violet Blue"     14 "Spring Green"   15 "Burgundy"
+	16 "Green Yellow" 17 "Light Chocolate" 18 "Dark Chocolate" 19 "Light Navy"
+	20 "Dark Navy"    21 "Light Dust"      22 "Dark Dust"      23 "Gray"
+	24 "Black"        25 "Light Mule"      26 "Dark Mule"      27 "Violet"
+	28 "Royal Blue"   29 "White")))
 
-  (labels
-      ((pick-color-table (keyword)
+  (flet
+      ((color-table (keyword)
 	 (case keyword
 	   ((:fur :markings)                        color-table-1)
 	   (:hair                                   color-table-2)
@@ -82,16 +82,16 @@
 	   (otherwise (error "Keyword not matching any of:
 :FUR :MARKINGS :HAIR :EYES :BADGE :VEST :BRACERS :CAPE :BOOTS :TROUSERS")))))
     
-    (defun get-color-char (keyword string)
+    (defun color-char (keyword string)
       "This, given a keyword designating a color-code slot and a color name, returns a proper
 character for the color code."
       (check-type string string)
       (check-type keyword keyword)
-      (string=-getf-key (pick-color-table keyword) string))
+      (string=-getf-key (color-table keyword) string))
 
-    (defun get-color-string (keyword char)
+    (defun color-string (keyword char)
       "This, given a keyword designating a color-code slot and a character for the color code,
 returns a proper color name."
       (check-type char character)
       (check-type keyword keyword)
-      (getf (pick-color-table keyword) char))))
+      (getf (color-table keyword) char))))
