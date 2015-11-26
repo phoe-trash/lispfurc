@@ -11,6 +11,16 @@
 ;;;;=========================================================
 ;;;; (NESTED) ALIST HELPER FUNCTIONS
 
+(defmacro alist-gen (&rest args)
+  "This generates an alist based on its arguments list.
+If any key has a default value, it gets evaluated and set as the value within the alist.
+Otherwise, that key's its value is set to NIL."
+  (flet ((conser (arg)
+	   (if (consp arg)
+	       (cons (first arg) (eval (second arg)))
+	       (cons arg nil))))
+    (list 'quote (mapcar #'conser args))))
+
 (defun value (key alist)
   "Given an alist and a key, returns a respective value or NIL if it's not found."
   (cdr (assoc key alist)))
